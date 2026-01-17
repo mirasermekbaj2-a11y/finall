@@ -7,7 +7,7 @@ services:
     depends_on:
       - database-service
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://database-service:5432/postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://database-service:5432/librarydata
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -20,6 +20,6 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=librarydata
     ports:
       - 2345:5432

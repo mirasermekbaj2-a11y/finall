@@ -15,7 +15,7 @@ services:
       - 3005:8080
 
   database-service:
-    image: 'postgres:16'
+    image: 'postgres:15'
     container_name: 'database-container'
     environment:
       - POSTGRES_USER=postgres

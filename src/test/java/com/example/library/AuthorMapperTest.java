@@ -56,16 +56,12 @@ public class AuthorMapperTest {
 
         List<AuthorDto> dtoList = authorMapper.toDtoList(entityList);
 
-        // Часть 2: Проверка на null
         Assertions.assertNotNull(dtoList);
 
-        // Часть 3: Проверка что список не пустой
         Assertions.assertNotEquals(0, dtoList.size());
 
-        // Часть 4: Проверка размера
         Assertions.assertEquals(entityList.size(), dtoList.size());
 
-        // Часть 5: Цикл для детальной проверки каждого элемента
         for (int i = 0; i < entityList.size(); i++) {
             Author entityAuthor = entityList.get(i);
             AuthorDto dtoAuthor = dtoList.get(i); // Берем соответствующий элемент из результата
